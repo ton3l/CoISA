@@ -1,6 +1,8 @@
 package lab2;
 import lab2.Resumo;
 
+import java.util.Arrays;
+
 public class RegistroResumos {
     Resumo[] resumos;
     int iResumos;
@@ -55,5 +57,12 @@ public class RegistroResumos {
             }
         }
         return false;
+    }
+
+    public String[] busca(String chaveDeBusca){
+        return Arrays.stream(resumos)
+                .filter(resumo -> resumo != null && resumo.conteudo.toLowerCase().contains(chaveDeBusca.toLowerCase()))
+                .map(resumo -> resumo.tema)
+                .toArray(String[]::new);
     }
 }
