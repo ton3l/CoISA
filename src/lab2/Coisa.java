@@ -49,6 +49,25 @@ public class Coisa {
         prog2.cadastraNota(4, 10.0);
         System.out.println(prog2.aprovado());
         System.out.println(prog2.toString());
+        Disciplina labprog2 = new Disciplina("LABORATORIO DE PROGRAMACAO 2", 10);
+        labprog2.cadastraNota(8, 10.0);
+        labprog2.cadastraHoras(4);
+        labprog2.cadastraNota(1, 5.0);
+        labprog2.cadastraNota(2, 6.0);
+        labprog2.cadastraNota(3, 7.0);
+        System.out.println(labprog2.aprovado());
+        labprog2.cadastraNota(4, 10.0);
+        System.out.println(labprog2.aprovado());
+        System.out.println(labprog2.toString());
+        Disciplina prog1 = new Disciplina("PROGRAMACAO 1", 4, new double[]{1.0, 6.0, 2.0, 3.0});
+        prog1.cadastraHoras(4);
+        prog1.cadastraNota(1, 5.0);
+        prog1.cadastraNota(2, 6.0);
+        prog1.cadastraNota(3, 7.0);
+        System.out.println(prog1.aprovado());
+        prog1.cadastraNota(4, 10.0);
+        System.out.println(prog1.aprovado());
+        System.out.println(prog1.toString());
     }
     private static void registrarResumos() {
         RegistroResumos meusResumos = new RegistroResumos(100);  // 100 resumos
