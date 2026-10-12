@@ -2,10 +2,19 @@ package lab2;
 
 import java.util.Arrays;
 
+/**
+* Representação de uma disciplina/matéria. Uma disciplina deve ter notas, pesos e nome obrigatóriamente.
+*
+* @author Elton Nascimento
+ */
+
 public class Disciplina {
     private String nomeDisciplina;
     private int horasDeEstudo;
     private double[] notas;
+    /**
+     * Pesos das notas, sempre deve ter o mesmo tamanho do array de notas, caso não seja explicitamente definido é preenchido com 1 para manter a lógica de média ponderada.
+     */
     private double[] pesos;
 
     public Disciplina(String nomeDisciplina) {
@@ -16,6 +25,12 @@ public class Disciplina {
         Arrays.fill(this.pesos, 1);
     }
 
+    /**
+     * Constrói uma Disciplina a partir do nome e do número de notas, necessário caso não sejam passados pesos. Array de pesos é preenchido com 1.
+     *
+     * @param nomeDisciplina
+     * @param numeroDeNotas
+     */
     public Disciplina(String nomeDisciplina, int numeroDeNotas) {
         this.nomeDisciplina = nomeDisciplina;
         this.horasDeEstudo = 0;

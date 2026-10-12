@@ -2,6 +2,12 @@ package lab2;
 
 import java.util.Arrays;
 
+/**
+ * Representação do sistema, classe que controla o fluxo de execução e ciclo de vida do sistema, também agindo como arquivo de especificação
+ *
+ * @author Elton Nascimento
+ */
+
 public class Coisa {
     public static void main(String[] args) {
         registrarDescanso();
@@ -13,6 +19,7 @@ public class Coisa {
         registrarResumos();
         System.out.println("-----");
     }
+
     public static void registrarDescanso() {
         Descanso descanso = new Descanso();
         System.out.println(descanso.getStatusGeral());
@@ -26,6 +33,7 @@ public class Coisa {
         descanso.defineNumeroSemanas(1);
         System.out.println(descanso.getStatusGeral());
     }
+
     private static void registrarTempoOnline() {
         RegistroTempoOnline tempoLP2 = new RegistroTempoOnline("LP2", 30);
         tempoLP2.adicionaTempoOnline(10);
@@ -39,6 +47,7 @@ public class Coisa {
         RegistroTempoOnline tempoP2 = new RegistroTempoOnline("P2");
         System.out.println(tempoP2.toString());
     }
+
     private static void controlarDisciplina() {
         Disciplina prog2 = new Disciplina("PROGRAMACAO 2");
         prog2.cadastraHoras(4);
@@ -69,6 +78,7 @@ public class Coisa {
         System.out.println(prog1.aprovado());
         System.out.println(prog1.toString());
     }
+
     private static void registrarResumos() {
         RegistroResumos meusResumos = new RegistroResumos(100);  // 100 resumos
 
